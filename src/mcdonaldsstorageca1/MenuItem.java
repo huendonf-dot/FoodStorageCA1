@@ -8,18 +8,21 @@ package mcdonaldsstorageca1;
  *
  * @author huend
  */
+// Stores the information about one menu item
 public class MenuItem {
+    // Item details
  private String name;
 private double weight;
 private String bestBeforeDate;
 private String timeAdded; 
-
+// Creates a new menu item
 public MenuItem(String name, double weight, String bestBeforeDate, String timeAdded) {
  this.name = name;
 this.weight = weight;
 this.bestBeforeDate = bestBeforeDate;
 this.timeAdded = timeAdded;   
 }
+// Get item information
 public String getName() {
     
     return name;
