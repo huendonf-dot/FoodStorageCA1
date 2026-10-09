@@ -34,4 +34,13 @@ if (front == rear) {
 items[front] = null;
 front++;
 }
+// Shows the first item in the queue
+public void peekItem() {
+    // Checks if the queue is empty
+if (front == rear) {
+    System.out.println("Tray area is empty.");
+    return;
+}
+System.out.println("Next item: " + items[front].getName());
+}
 }
