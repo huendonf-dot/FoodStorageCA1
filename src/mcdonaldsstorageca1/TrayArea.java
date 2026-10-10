@@ -43,4 +43,9 @@ if (front == rear) {
 }
 System.out.println("Next item: " + items[front].getName());
 }
+// Shows how many items are in the queue
+public void showSize() {
+int size = rear - front;
+System.out.println("Items in tray area: " + size);
+}
 }
