@@ -19,6 +19,8 @@ MenuItem item1 = new MenuItem("Big Mac", 0.25, "10/10/2026", "23:45");
 tray.addItem(item1);
 // Shows the first item
 tray.peekItem();
+// Shows the number of items in the queue
+tray.showSize(); 
 }    
 }
 

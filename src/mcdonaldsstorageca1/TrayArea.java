@@ -36,6 +36,7 @@ front++;
 }
 // Shows the first item in the queue
 public void peekItem() {
+    // Shows the number of items in the queue
     // Checks if the queue is empty
 if (front == rear) {
     System.out.println("Tray area is empty.");
