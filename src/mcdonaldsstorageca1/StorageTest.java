@@ -21,6 +21,11 @@ tray.addItem(item1);
 tray.peekItem();
 // Shows the number of items in the queue
 tray.showSize(); 
-}    
+// Removes the first item from the queue
+tray.removeItem();
+
+// Checks the number of items after removing
+tray.showSize();
+}
 }
 
