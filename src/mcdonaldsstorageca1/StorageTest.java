@@ -21,11 +21,19 @@ tray.addItem(item1);
 tray.peekItem();
 // Shows the number of items in the queue
 tray.showSize(); 
+
+// Creates a second menu item
+MenuItem item2 = new MenuItem("McChicken", 0.25, "12/10/2026", "21:30");
+
+// Adds the second item to the queue
+tray.addItem(item2);
 // Removes the first item from the queue
 tray.removeItem();
 
 // Checks the number of items after removing
 tray.showSize();
+// Shows the next item after removing the first
+tray.peekItem();
 }
 }
 
