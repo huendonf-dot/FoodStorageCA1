@@ -13,32 +13,36 @@ public class TrayArea {
     private MenuItem[] items = new MenuItem[8];
 private int front = 0;
 private int rear = 0;
+// Counts the number of items in the queue
+private int count = 0;
 
 // Adds a new item to the queue
 public void addItem(MenuItem item) {
     // Checks if the queue is full
-   if (rear == 8) {
+   if (count == 8) {
     System.out.println("Tray area is full.");
     return;
 }
 items[rear] = item;
-rear++;
+rear = (rear + 1) % 8;
+count++;
 }
 // Removes the first item from the queue
 public void removeItem() {
     // Checks if the queue is empty
-if (front == rear) {
+if (count == 0) {
     System.out.println("Tray area is empty.");
     return;
 }
 items[front] = null;
-front++;
+front = (front + 1) % 8;
+count--;
 }
 // Shows the first item in the queue
 public void peekItem() {
     // Shows the number of items in the queue
     // Checks if the queue is empty
-if (front == rear) {
+if (count == 0) {
     System.out.println("Tray area is empty.");
     return;
 }
@@ -46,7 +50,6 @@ System.out.println("Next item: " + items[front].getName());
 }
 // Shows how many items are in the queue
 public void showSize() {
-int size = rear - front;
-System.out.println("Items in tray area: " + size);
+System.out.println("Items in tray area: " + count);
 }
 }

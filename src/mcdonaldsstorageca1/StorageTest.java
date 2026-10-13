@@ -34,6 +34,14 @@ tray.removeItem();
 tray.showSize();
 // Shows the next item after removing the first
 tray.peekItem();
+// Removes the remaining item
+tray.removeItem();
+
+// Checks if the queue is empty
+tray.showSize();
+
+// Tries to view an item from an empty queue
+tray.peekItem();
 }
 }
 
