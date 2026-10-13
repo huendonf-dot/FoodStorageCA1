@@ -34,9 +34,18 @@ if (count == 0) {
     System.out.println("Tray area is empty.");
     return;
 }
-items[front] = null;
-front = (front + 1) % 8;
-count--;
+}
+// Removes the last item (LIFO)
+public void removeLastItem() {
+
+    if (count == 0) {
+        System.out.println("Tray area is empty.");
+        return;
+    }
+
+    rear = (rear - 1 + 8) % 8;
+    items[rear] = null;
+    count--;
 }
 // Shows the first item in the queue
 public void peekItem() {
