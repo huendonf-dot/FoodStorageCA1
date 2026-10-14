@@ -12,9 +12,11 @@ import java.time.temporal.ChronoUnit;
  */
 // Stores the information about one menu item
 public class MenuItem extends FoodItem {
-    // Item details
+    
+    // Creates a new menu item
 private String bestBeforeDate;
 private String timeAdded; 
+
 // Creates a new menu item
 public MenuItem(String name, double weight, String bestBeforeDate, String timeAdded) {
     if (weight <= 0) {

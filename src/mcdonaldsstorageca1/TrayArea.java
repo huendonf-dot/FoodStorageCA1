@@ -7,7 +7,9 @@ package mcdonaldsstorageca1;
 /**
  *
  * @author huend
- */// Controls the food trays using a queue
+ */ 
+ 
+ /// Controls the food trays using a queue
 public class TrayArea {
     // Queue with maximum 8 items
     private MenuItem[] items = new MenuItem[8];
@@ -70,7 +72,7 @@ public void removeLastItem() {
 }
 // Shows the first item in the queue
 public void peekItem() {
-    // Shows the number of items in the queue
+    
     // Checks if the queue is empty
 if (count == 0) {
     System.out.println("Tray area is empty.");
