@@ -28,6 +28,7 @@ public void addItem(MenuItem item) {
 items[rear] = item;
 rear = (rear + 1) % 8;
 count++;
+    System.out.println("Food item added successfully.");
 }
 // Removes the first food item (FIFO)
 public void removeItem() {
@@ -84,17 +85,31 @@ System.out.println("Next item: " + items[front].getName());
 public void showSize() {
 System.out.println("Items in tray area: " + count);
 }
-// Displays all food items
-public void displayItems() {
+// Displays all food items in a table
+public void displayItems() 
+{
     if (count == 0) {
         System.out.println("Tray area is empty.");
         return;
     }
 
+    // Table header
+    System.out.println("------------------------------------------------");
+    System.out.printf("%-15s %-12s %-18s%n",
+            "Food Name", "Weight (g)", "Best-Before Date");
+    System.out.println("------------------------------------------------");
+
+    // Display each food item
     for (int i = 0; i < count; i++) {
         int position = (front + i) % 8;
-        System.out.println(items[position].getName());
+
+        System.out.printf("%-15s %-12.1f %-18s%n",
+                items[position].getName(),
+                items[position].getWeight(),
+                items[position].getBestBeforeDate());
     }
+
+    System.out.println("------------------------------------------------");
 }
 // Searches for a food item by name
 public void searchItem(String name) {

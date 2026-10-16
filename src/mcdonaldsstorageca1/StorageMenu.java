@@ -85,15 +85,16 @@ public class StorageMenu {
                         // Create and add the food item
                         MenuItem item = new MenuItem(name, weight, date, time);
                         tray.addItem(item);
+                        
 
-                } catch (java.time.format.DateTimeParseException e) {
-    // Invalid date entered
-    System.out.println("Invalid date format.");
+                    } catch (java.time.format.DateTimeParseException e) {
+                        // Invalid date entered
+                        System.out.println("Invalid date format.");
 
-} catch (IllegalArgumentException e) {
-    // Invalid weight or expiry date
-    System.out.println("Validation: " + e.getMessage());
-}
+                    } catch (IllegalArgumentException e) {
+                        // Invalid weight or expiry date
+                        System.out.println("Validation: " + e.getMessage());
+                    }
                     break;
 
                 case 2:
@@ -112,7 +113,7 @@ public class StorageMenu {
                     break;
 
                 case 5:
-                    // Show all food itemsstorage
+                    // Show all food items
                     tray.displayItems();
                     break;
 
